@@ -136,6 +136,10 @@ window.open(pagina,"",opciones);
                   </table>
 				<?php $sub = $_GET['sub'];
 				switch ($sub) { 
+					
+					
+				
+				//Consultar empresas
 		   		case 1:
 				?>
 				
@@ -272,6 +276,9 @@ window.open(pagina,"",opciones);
 				</div>
 				<?php
 				break; 
+				
+				
+				//Consultar alumnos
 		   		case 2:
 				?>
                 <table width="660" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -401,6 +408,8 @@ window.open(pagina,"",opciones);
             	<?php
 					break; 
 					
+					
+					//Consultar ciclos
 					case 3:
                 ?>
                 <table width="660" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -523,6 +532,9 @@ window.open(pagina,"",opciones);
                 <?php 
                 break; 
 				
+                
+                
+                //Consultar FCT
                 case 4:
 				?>
                 <table width="660" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -664,6 +676,9 @@ window.open(pagina,"",opciones);
                   </div>
 				<?php	
 					break; 
+					
+					
+					//Consultar demandas
 					case 5:
                 ?>
                  <table width="660" border="0" align="center" cellpadding="0" cellspacing="0">
