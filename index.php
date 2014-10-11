@@ -14,7 +14,7 @@
 </head>
 <script language="JavaScript">
 function Abrir_ventana (pagina) {
-var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=520, height=400, top=50, left=100";
+var opciones="toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, width=600, height=550, top=50, left=100";
 window.open(pagina,"",opciones);
 }
 </script>
