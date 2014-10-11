@@ -39,9 +39,9 @@
 
 
 
-//Borrar usuario
-<?php if (isset($_GET['borrarusuario'])) { 
 
+<?php if (isset($_GET['borrarusuario'])) { 
+	//Borrar usuario
 	$borrarusuario = $_GET['borrarusuario'];
 	$result = $db->Execute("DELETE FROM usuarios WHERE id = $borrarusuario");
 
@@ -49,9 +49,9 @@
 
 
 
-//Actualizar usuario
-<?php if (isset($_GET['actuuser'])) { 
 
+<?php if (isset($_GET['actuuser'])) { 
+	//Actualizar usuario
 	$idus = $_GET['actuuser'];
 	$nombre = $_POST['nombre'];
 	$pass = $_POST['pass'];
@@ -66,9 +66,9 @@
 ?>
 
 
-//Guardar usuario
-<?php if (isset($_GET['guardaruser'])) { 
 
+<?php if (isset($_GET['guardaruser'])) { 
+	//Guardar usuario
 	$nombre = $_POST['nombre'];
 	$pass = $_POST['pass'];
 	$nivel = $_POST['nivel'];
@@ -250,7 +250,7 @@
 
 
 
-//Formulario para dar de alta usuarios
+<!--Formulario para dar de alta usuarios-->
 <form id="form2" name="form1" method="post"
 	action="index.php?menu=3&amp;sub=1&guardaruser" style="margin: 0px">
 	<table width="290" border="0" align="center" cellpadding="0"
@@ -296,7 +296,7 @@
 
 
 
-//Tabla de usuarios creados
+<!-- Tabla de usuarios creados -->
 <table width="290" border="0" align="center" cellpadding="0"
 	cellspacing="0">
 	<tr>
@@ -305,9 +305,6 @@
 	</tr>
 </table>
 
-
-
-//Tabla listado de usuarios
 <table width="290" border="0" align="center" cellpadding="0"
 	cellspacing="0" class="texte_normal">
 	<tr>
