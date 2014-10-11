@@ -470,9 +470,23 @@
                                     </label></td>
                                   </tr>
                                   <tr>
-                                    <td height="22" bgcolor="#F8F8F8">&nbsp;Familia 1</td>
+                                    <td height="22" bgcolor="#F8F8F8">&nbsp;Familia</td>
                                     <td bgcolor="#F8F8F8"><label>
-                                      <input name="familia" type="text" class="texte_normal" id="textfield6" value="<?php echo htmlentities($familia) ?>" />
+											
+											<!-- Desplegable de familias -->
+											<select name="familia" class="texte_normal" id="familia">
+											<option value="" selected=""></option>
+											<?php
+						                        $result = $db->Execute("SELECT * FROM CDE_familias ORDER BY nombre ASC");
+											 		 while (!$result->EOF) {
+														$fm = $result->fields['nombre'];
+											?>
+						                             <option value="<?php echo $fm ?>" <?php if ($familia==$fm) { ?>selected="selected"<?php } ?>><?php echo $fm ?></option>
+						                    <?php
+														$result->MoveNext();
+													 }
+											?>
+											</select>                                      
                                     </label></td>
                                   </tr>
                                   <tr>

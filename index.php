@@ -700,69 +700,7 @@ Ver
 				<td height="6"></td>
 				</tr>
 				</table>
-                <!--
-				<table width="640" border="0" align="center" cellpadding="0" cellspacing="0">
-				  <tr>
-				    <td height="24" align="center" bgcolor="#EEEEEE" class="texte_normal_blanco">
-                    <form id="form9" name="form5" method="post" action="index.php?menu=3&amp;sub=<?php echo $sub ?>&amp;search2" style="margin:0px">
-				      <table width="660" border="0" cellspacing="0" cellpadding="0">
-				        <tr>
-				          <td width="88" height="26" class="texte_normal">&nbsp;Buscar por</td>
-				          <td width="97" align="center" class="texte_normal">Familia</td>
-				          <td width="140" align="left"><select name="campo1" class="texte_normal" id="campo1">
-				            <option value="CFGM-CM">CFGM-CM</option>
-				            <option value="CGM - EIE">CGM - EIE</option>
-				            <option value="CGM- MECA">CGM- MECA</option>
-				            <option value="CGM-CM">CGM-CM</option>
-				            <option value="CGM-EI">CGM-EI</option>
-				            <option value="CGM-EIE">CGM-EIE</option>
-				            <option value="CGS-SRCA">CGS-SRCA</option>
-				            <option value="CGM-ET">CGM-ET</option>
-				            <option value="CGM-EV">CGM-EV</option>
-				            <option value="CGM-FMM">CGM-FMM</option>
-				            <option value="CGM-GCM">CGM-GCM</option>
-				            <option value="CGM-MECA">CGM-MECA</option>
-				            <option value="CGM-OET">CGM-OET</option>
-				            <option value="CGM-SRCA">CGM-SRCA</option>
-				            <option value="CGS- CI">CGS- CI</option>
-				            <option value="CGS- SRCA">CGS- SRCA</option>
-				            <option value="CGS-AUT">CGS-AUT</option>
-				            <option value="CGS-CGM">CGS-CGM</option>
-				            <option value="CGS-CI">CGS-CI</option>
-				            <option value="CGS-DPM">CGS-DPM</option>
-				            <option value="CGS-GCM">CGS-GCM</option>
-				            <option value="CGS-PTHT">CGS-PTHT</option>
-				            <option value="CGS-RL">CGS-RL</option>
-				            <option value="CGS-SRCA">CGS-SRCA</option>
-				            <option value="CM">CM</option>
-				            <option value="FAM. GCM">FAM. GCM</option>
-				            <option value="GCS-CI">GCS-CI</option>
-				            <option value="PCP-OAFM">PCP-OAFM</option>
-				            <option value="PCP-OAPT">PCP-OAPT</option>
-				            <option value="PTHT">PTHT</option>
-                          </select></td>
-				          <td width="94" align="center" class="texte_normal">Evaluación</td>
-				          <td width="121" align="left"><label>
-				            <select name="campo2" id="campo2">
-				              <option value="A">A</option>
-				              <option value="B">B</option>
-				              <option value="C">C</option>
-			                </select>
-			              </label></td>
-				          <td width="120" align="center"><label>
-				            <input type="image" src="resources/bt_buscar.png" name="button9" id="button9" value="Enviar" />
-				            </label></td>
-			            </tr>
-			          </table>
-				      </form></td>
-			      </tr>
-				  </table>
-				<table width="640" border="0" align="center" cellpadding="0" cellspacing="0">
-				  <tr>
-				    <td height="6"></td>
-			      </tr>
-				  </table>
-                  -->
+
 				<table width="640" border="0" align="center" cellpadding="0" cellspacing="0">
 				  <tr>
 				    <td height="24" align="center" bgcolor="#EEEEEE" class="texte_normal_blanco"><form id="form10" name="form5" method="post" action="index.php?menu=3&amp;sub=<?php echo $sub ?>&amp;search3" style="margin:0px">
@@ -771,38 +709,7 @@ Ver
 				          <td width="88" height="26" class="texte_normal">&nbsp;Buscar por</td>
 				          <td width="97" align="center" class="texte_normal">Familia</td>
 				          <td width="140" align="left">
-                          <!--<select name="campo1" class="texte_normal" id="campo1">
-				            <option value="CFGM-CM">CFGM-CM</option>
-				            <option value="CGM - EIE">CGM - EIE</option>
-				            <option value="CGM- MECA">CGM- MECA</option>
-				            <option value="CGM-CM">CGM-CM</option>
-				            <option value="CGM-EI">CGM-EI</option>
-				            <option value="CGM-EIE">CGM-EIE</option>
-				            <option value="CGS-SRCA">CGS-SRCA</option>
-				            <option value="CGM-ET">CGM-ET</option>
-				            <option value="CGM-EV">CGM-EV</option>
-				            <option value="CGM-FMM">CGM-FMM</option>
-				            <option value="CGM-GCM">CGM-GCM</option>
-				            <option value="CGM-MECA">CGM-MECA</option>
-				            <option value="CGM-OET">CGM-OET</option>
-				            <option value="CGM-SRCA">CGM-SRCA</option>
-				            <option value="CGS- CI">CGS- CI</option>
-				            <option value="CGS- SRCA">CGS- SRCA</option>
-				            <option value="CGS-AUT">CGS-AUT</option>
-				            <option value="CGS-CGM">CGS-CGM</option>
-				            <option value="CGS-CI">CGS-CI</option>
-				            <option value="CGS-DPM">CGS-DPM</option>
-				            <option value="CGS-GCM">CGS-GCM</option>
-				            <option value="CGS-PTHT">CGS-PTHT</option>
-				            <option value="CGS-RL">CGS-RL</option>
-				            <option value="CGS-SRCA">CGS-SRCA</option>
-				            <option value="CM">CM</option>
-				            <option value="FAM. GCM">FAM. GCM</option>
-				            <option value="GCS-CI">GCS-CI</option>
-				            <option value="PCP-OAFM">PCP-OAFM</option>
-				            <option value="PCP-OAPT">PCP-OAPT</option>
-				            <option value="PTHT">PTHT</option>
-			              </select>-->
+                          
                           <?php $campo1 = $_POST['campo1']; ?>
                           <select name="campo1" class="texte_normal" id="campo1">
                           <?php
@@ -816,23 +723,6 @@ Ver
 									$result->MoveNext();
 									}
 							  ?>
-                            <!--
-                            <option value="CM" <?php if ($campo1=="CM") { ?>selected="selected"<?php } ?>>CM</option>
-                            <option value="EIA" <?php if ($campo1=="EIA") { ?>selected="selected"<?php } ?>>EIA</option>
-                            <option value="OET" <?php if ($campo1=="OET") { ?>selected="selected"<?php } ?>>OET</option>
-                            <option value="EV" <?php if ($campo1=="EV") { ?>selected="selected"<?php } ?>>EV</option>
-                            <option value="MECA" <?php if ($campo1=="MECA") { ?>selected="selected"<?php } ?>>MECA</option>
-                            <option value="FMM" <?php if ($campo1=="FMM") { ?>selected="selected"<?php } ?>>FMM</option>
-                            <option value="SRCA" <?php if ($campo1=="SRCA") { ?>selected="selected"<?php } ?>>SRCA</option>
-                            <option value="AUT" <?php if ($campo1=="AUT") { ?>selected="selected"<?php } ?>>AUT</option>
-                            <option value="CI" <?php if ($campo1=="CI") { ?>selected="selected"<?php } ?>>CI</option>
-                            <option value="GCM" <?php if ($campo1=="GCM") { ?>selected="selected"<?php } ?>>GCM</option>
-                            <option value="DPM" <?php if ($campo1=="DPM") { ?>selected="selected"<?php } ?>>DPM</option>
-				            <option value="PTHT" <?php if ($campo1=="PTHT") { ?>selected="selected"<?php } ?>>PTHT</option>
-				            <option value="RL" <?php if ($campo1=="RL") { ?>selected="selected"<?php } ?>>RL</option>
-				            <option value="PCP-OAFM" <?php if ($campo1=="PCP-OAFM") { ?>selected="selected"<?php } ?>>PCP-OAFM</option>
-				            <option value="PCP-OAPT" <?php if ($campo1=="PCP-OAPT") { ?>selected="selected"<?php } ?>>PCP-OAPT</option>
-                            -->
 			              </select>
                           </td>
 				          <td width="95" align="center" class="texte_normal">Población</td>
@@ -965,7 +855,7 @@ Ver
                     <td width="70" align="left" class="texte_mini"><?php echo utf8_encode($poblacion) ?></td>
                     <td width="70" align="left" class="texte_mini"><?php echo utf8_encode($telf1) ?></td>
                     <td width="90" align="left" class="texte_mini"><?php echo utf8_encode($cif) ?></td>
-                    <td width="34" align="left" class="texte_mini"><a href="javascript:Abrir_ventana('ficha_empresa.php?id=<?php echo $id ?>')" class="texte_mini">info</a></td>
+                    <td width="34" align="left" class="texte_mini"><a href="javascript:Abrir_ventana('ficha_empresa.php?id=<?php echo $id ?>')" class="texte_mini"><img src="resources/ico_m_info.png" width="16" height="16" border="0" /></a></td>
                     <td width="34" align="left">
                     
                     <?php if ($_SESSION["autentificado"] <= 3) { ?>
