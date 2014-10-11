@@ -5,6 +5,8 @@
 
 <?php if (isset($_GET['guardaruser'])) { $result = $db->Execute("INSERT INTO usuarios (nombre, pass, nivel) VALUES ('$nombre', '$pass', '$nivel')"); } ?>
 
+<p>n_alumno.php</p>
+
 				  <form id="form1" name="form1" method="post" action="index.php?menu=3&sub=2&guardaralumno" style="margin:0px">
                     <table width="290" border="0" align="center" cellpadding="0" cellspacing="0">
                       <tr>

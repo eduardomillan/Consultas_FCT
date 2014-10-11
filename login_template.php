@@ -24,6 +24,8 @@
 </head>
 
 <body>
+<p>login_template.php</p>
+
 <br /><br /><br /><br /><br /><br /><br /><br />
 <table width="400" height="177" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>

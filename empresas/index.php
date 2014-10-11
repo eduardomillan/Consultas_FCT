@@ -47,6 +47,7 @@ window.open(pagina,"",opciones);
 ?>
 
 <body>
+<p>empresas/index.php</p>
 <?php if (isset($_GET['login'])) {
 
 	$nombre = $_POST['nombre'];

@@ -47,6 +47,7 @@ window.open(pagina,"",opciones);
 ?>
 
 <body>
+<p>index.php</p>
 <?php if (isset($_GET['login'])) {
 
 	$nombre = $_POST['nombre'];
@@ -805,10 +806,10 @@ Ver
                           <?php $campo1 = $_POST['campo1']; ?>
                           <select name="campo1" class="texte_normal" id="campo1">
                           <?php
-                      		$result = $db->Execute("SELECT * FROM CDE_familias ORDER BY nombre ASC");
+                      		$result = $db->Execute("SELECT DISTINCT familia FROM CDE_empresas_BACK2 ORDER BY familia ASC");
 					 		 while (!$result->EOF) {
-								$id = $result->fields[0];
-								$nombre = $result->fields[1];
+								//$id = $result->fields[0];
+								$nombre = $result->fields[0];
 							?>
                              <option value="<?php echo $nombre ?>" <?php if ($campo1==$nombre) { ?>selected="selected"<?php } ?>><?php echo $nombre ?></option>
                              <?php

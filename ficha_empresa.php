@@ -34,7 +34,7 @@ $result = $db->Execute("SELECT * FROM CDE_empresas_BACK2 WHERE id = $id");
 	$evalua_anterior = $result->fields['evalua_anterior'];
 
 ?>
-
+<p>ficha_empresa.php</p>
 <table width="500" border="0" align="center" cellpadding="0" cellspacing="0">
                     <tr>
                       <td width="291" height="22" bgcolor="#000000" class="texte_normal_blanco">&nbsp;&nbsp;Datos de la Empresa</td>

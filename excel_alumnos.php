@@ -46,7 +46,7 @@
 	}
 ?>
 <link href="resources/estilos.css" rel="stylesheet" type="text/css" />
-
+<p>excel_alumnos.php</p>
 <br />
 <table width="280" border="0" cellspacing="0" cellpadding="0">
   <tr>

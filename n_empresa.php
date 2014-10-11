@@ -62,6 +62,9 @@
 
 ?>
 
+<p>n_empresa.php</p>
+
+
 <form id="form1" name="form1" method="post" action="index.php?menu=3&sub=1&guardarempresa" style="margin:0px">
                     <table width="290" border="0" align="center" cellpadding="0" cellspacing="0">
                       <tr>
