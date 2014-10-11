@@ -410,7 +410,7 @@
                                  <form id="form3" name="form3" method="post" action="index.php?menu=<?php echo $_GET['menu'] ?>&sub=1&edit=<?php echo $id ?>&ok" style="margin:0px">
                                 <table width="290" border="0" align="center" cellpadding="0" cellspacing="0" class="texte_normal">
                                   <tr>
-                                    <td width="120" height="22" bgcolor="#F8F8F8">&nbsp;Nombre</td>
+                                    <td width="120" height="22" bgcolor="#F8F8F8">&nbsp;Razón social</td>
                                     <td width="170" bgcolor="#F8F8F8"><label>
                                     <input name="nombre" type="text" class="texte_normal" id="nombre" value="<?php echo htmlentities($nombre) ?>" />
                                     </label></td>
